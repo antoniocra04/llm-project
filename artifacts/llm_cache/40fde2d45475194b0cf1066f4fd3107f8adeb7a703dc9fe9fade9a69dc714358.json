@@ -1,0 +1,1 @@
+{"id": "chatcmpl-854", "object": "chat.completion", "created": 1794653528, "model": "qwen2.5:0.5b", "system_fingerprint": "fp_ollama", "choices": [{"index": 0, "message": {"role": "assistant", "content": "{\n  \"answer\": \"Model: BZ-210\",\n  \"score\": 9\n}"}, "finish_reason": "stop"}], "usage": {"prompt_tokens": 285, "completion_tokens": 24, "total_tokens": 309}}

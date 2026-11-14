@@ -1,0 +1,1 @@
+{"id": "chatcmpl-88", "object": "chat.completion", "created": 1794653277, "model": "qwen2.5:0.5b", "system_fingerprint": "fp_ollama", "choices": [{"index": 0, "message": {"role": "assistant", "content": "{\n  \"answer\": \"Пусковое реле\",\n  \"score\": 10\n}"}, "finish_reason": "stop"}], "usage": {"prompt_tokens": 469, "completion_tokens": 23, "total_tokens": 492}}

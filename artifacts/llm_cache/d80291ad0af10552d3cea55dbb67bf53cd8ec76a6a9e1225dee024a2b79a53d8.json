@@ -1,0 +1,1 @@
+{"id": "chatcmpl-702", "object": "chat.completion", "created": 1794653056, "model": "qwen2.5:0.5b", "system_fingerprint": "fp_ollama", "choices": [{"index": 0, "message": {"role": "assistant", "content": "{ \"answer\": \"E-23 (не указано)\" , \"score\": 0 }"}, "finish_reason": "stop"}], "usage": {"prompt_tokens": 464, "completion_tokens": 25, "total_tokens": 489}}

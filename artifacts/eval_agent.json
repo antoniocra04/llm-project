@@ -1,0 +1,643 @@
+{
+  "summary": {
+    "mode": "agent",
+    "model": "qwen2.5:0.5b",
+    "questions": 24,
+    "accuracy": 0.125,
+    "by_type": {
+      "local": {
+        "questions": 5,
+        "accuracy": 0.0
+      },
+      "multihop": {
+        "questions": 7,
+        "accuracy": 0.0
+      },
+      "global": {
+        "questions": 4,
+        "accuracy": 0.0
+      },
+      "tool": {
+        "questions": 5,
+        "accuracy": 0.0
+      },
+      "refusal": {
+        "questions": 3,
+        "accuracy": 1.0
+      }
+    },
+    "fabricated_rate": 0.0,
+    "source_recall": 0.0,
+    "rejected_calls_rate": 0.875,
+    "llm_calls_per_question": 2.292,
+    "tokens_per_question": 1564.083
+  },
+  "rows": [
+    {
+      "id": "dev-01",
+      "type": "local",
+      "question": "По какому регламенту устраняют ошибку E-17?",
+      "answer": "В базе знаний не найдено.",
+      "correct": false,
+      "refused": true,
+      "fabricated": [],
+      "sources": [],
+      "source_recall": 0.0,
+      "steps": [
+        {
+          "tool": "check_stock",
+          "args": {
+            "part_id": "E-17",
+            "warehouse": "Москва"
+          },
+          "result": null,
+          "error": "Укажите номер детали в формате P-1042 или P-1042B."
+        }
+      ],
+      "rejected_steps": 1,
+      "llm_calls": 3,
+      "tokens": 1911
+    },
+    {
+      "id": "dev-02",
+      "type": "local",
+      "question": "На отказ какого узла указывает ошибка E-22?",
+      "answer": "В базе знаний не найдено.",
+      "correct": false,
+      "refused": true,
+      "fabricated": [],
+      "sources": [],
+      "source_recall": 0.0,
+      "steps": [
+        {
+          "tool": "check_stock",
+          "args": {
+            "warehouse": "Москва",
+            "part_id": "E-22"
+          },
+          "result": null,
+          "error": "Укажите номер детали в формате P-1042 или P-1042B."
+        }
+      ],
+      "rejected_steps": 1,
+      "llm_calls": 3,
+      "tokens": 1879
+    },
+    {
+      "id": "dev-03",
+      "type": "local",
+      "question": "Кто поставляет деталь P-3062C?",
+      "answer": "Цифральный насос P-3062C поставляется поставщиком по следующему ценам: 33190 руб.",
+      "correct": false,
+      "refused": false,
+      "fabricated": [],
+      "sources": [],
+      "source_recall": 0.0,
+      "steps": [
+        {
+          "tool": "get_price",
+          "args": {
+            "part_id": "P-3062C"
+          },
+          "result": {
+            "part_id": "P-3062C",
+            "name": "циркуляционный насос",
+            "price_rub": 33190,
+            "discontinued": false
+          },
+          "error": null
+        }
+      ],
+      "rejected_steps": 0,
+      "llm_calls": 2,
+      "tokens": 1432
+    },
+    {
+      "id": "dev-04",
+      "type": "local",
+      "question": "В какую линейку входит модель BZ-210?",
+      "answer": "В базе знаний не найдено.",
+      "correct": false,
+      "refused": true,
+      "fabricated": [],
+      "sources": [],
+      "source_recall": 0.0,
+      "steps": [
+        {
+          "tool": "get_price",
+          "args": {
+            "part_id": "BZ-210"
+          },
+          "result": null,
+          "error": "Укажите номер детали в формате P-1042 или P-1042B."
+        }
+      ],
+      "rejected_steps": 1,
+      "llm_calls": 3,
+      "tokens": 1845
+    },
+    {
+      "id": "dev-05",
+      "type": "local",
+      "question": "Чем заменена деталь P-2110?",
+      "answer": "Деталь P-2110 заменена на компрессор. Цена: 63130 руб. Она была отменена.",
+      "correct": false,
+      "refused": false,
+      "fabricated": [],
+      "sources": [],
+      "source_recall": 0.0,
+      "steps": [
+        {
+          "tool": "get_price",
+          "args": {
+            "part_id": "P-2110"
+          },
+          "result": {
+            "part_id": "P-2110",
+            "name": "компрессор",
+            "price_rub": 63130,
+            "discontinued": true
+          },
+          "error": null
+        }
+      ],
+      "rejected_steps": 0,
+      "llm_calls": 2,
+      "tokens": 1419
+    },
+    {
+      "id": "dev-06",
+      "type": "multihop",
+      "question": "Какую деталь заказать при ошибке E-17 на AR-210?",
+      "answer": "В базе знаний не найдено.",
+      "correct": false,
+      "refused": true,
+      "fabricated": [],
+      "sources": [],
+      "source_recall": 0.0,
+      "steps": [
+        {
+          "tool": "get_price",
+          "args": {
+            "part_id": "AR-210"
+          },
+          "result": null,
+          "error": "Укажите номер детали в формате P-1042 или P-1042B."
+        }
+      ],
+      "rejected_steps": 1,
+      "llm_calls": 3,
+      "tokens": 1813
+    },
+    {
+      "id": "dev-07",
+      "type": "multihop",
+      "question": "Какую деталь заказать при ошибке E-22 на GS-510?",
+      "answer": "В базе знаний не найдено.",
+      "correct": false,
+      "refused": true,
+      "fabricated": [],
+      "sources": [],
+      "source_recall": 0.0,
+      "steps": [
+        {
+          "tool": "get_price",
+          "args": {
+            "part_id": "GS-510"
+          },
+          "result": null,
+          "error": "Укажите номер детали в формате P-1042 или P-1042B."
+        }
+      ],
+      "rejected_steps": 1,
+      "llm_calls": 3,
+      "tokens": 1813
+    },
+    {
+      "id": "dev-08",
+      "type": "multihop",
+      "question": "Кто сейчас поставляет деталь узла «реле давления» для модели GS-520?",
+      "answer": "Для получения цен на деталь узла «реле давления» для модели GS-520, вы должны указать её ID. Пожалуйста, введите её ID.",
+      "correct": false,
+      "refused": true,
+      "fabricated": [],
+      "sources": [],
+      "source_recall": 0.0,
+      "steps": [
+        {
+          "tool": "get_price",
+          "args": {
+            "part_id": "реле давления",
+            "warehouse": "Москва"
+          },
+          "result": null,
+          "error": "Ожидаемые аргументы: part_id."
+        }
+      ],
+      "rejected_steps": 1,
+      "llm_calls": 2,
+      "tokens": 1439
+    },
+    {
+      "id": "dev-09",
+      "type": "multihop",
+      "question": "Какая деталь сейчас ставится в BZ-110 как узел «нагреватель оттайки»?",
+      "answer": "Данный товар не содержит детали BZ-110. Возможно, вы ошиблись или данные изображены неправильно. Пожалуйста, уточните, что именно вы хотите узнать о деталье BZ-110.",
+      "correct": false,
+      "refused": true,
+      "fabricated": [],
+      "sources": [],
+      "source_recall": 0.0,
+      "steps": [
+        {
+          "tool": "get_price",
+          "args": {
+            "part_id": "BZ-110",
+            "warehouse": "Москва"
+          },
+          "result": null,
+          "error": "Ожидаемые аргументы: part_id."
+        }
+      ],
+      "rejected_steps": 1,
+      "llm_calls": 2,
+      "tokens": 1467
+    },
+    {
+      "id": "dev-10",
+      "type": "multihop",
+      "question": "По какому регламенту устраняют отказ узла «вентилятор испарителя»?",
+      "answer": "Введи номер детали, чтобы я мог управлять вашим сервисным заказом.",
+      "correct": false,
+      "refused": true,
+      "fabricated": [],
+      "sources": [],
+      "source_recall": 0.0,
+      "steps": [
+        {
+          "tool": "check_stock",
+          "args": {
+            "part_id": "1234567890",
+            "warehouse": "Москва"
+          },
+          "result": null,
+          "error": "Укажите номер детали в формате P-1042 или P-1042B."
+        }
+      ],
+      "rejected_steps": 1,
+      "llm_calls": 2,
+      "tokens": 1445
+    },
+    {
+      "id": "dev-11",
+      "type": "multihop",
+      "question": "В каких моделях установлена деталь P-1046, снятая с производства?",
+      "answer": "Деталь P-1046 установлена в моделе \"Москва\". Она имеет цену 8090 руб. и снятая с производства.",
+      "correct": false,
+      "refused": false,
+      "fabricated": [],
+      "sources": [],
+      "source_recall": 0.0,
+      "steps": [
+        {
+          "tool": "get_price",
+          "args": {
+            "part_id": "P-1046"
+          },
+          "result": {
+            "part_id": "P-1046",
+            "name": "вентилятор испарителя",
+            "price_rub": 8090,
+            "discontinued": true
+          },
+          "error": null
+        }
+      ],
+      "rejected_steps": 0,
+      "llm_calls": 2,
+      "tokens": 1447
+    },
+    {
+      "id": "dev-12",
+      "type": "multihop",
+      "question": "Деталь какого поставщика нужна при ошибке E-14 на AR-320?",
+      "answer": "Данный поставщик не имеет детали AR-320. Пожалуйста, уточните, какой именно поставщик нужен для ошибки E-14 на AR-320.",
+      "correct": false,
+      "refused": true,
+      "fabricated": [],
+      "sources": [],
+      "source_recall": 0.0,
+      "steps": [
+        {
+          "tool": "get_price",
+          "args": {
+            "part_id": "AR-320",
+            "warehouse": "Москва"
+          },
+          "result": null,
+          "error": "Ожидаемые аргументы: part_id."
+        }
+      ],
+      "rejected_steps": 1,
+      "llm_calls": 2,
+      "tokens": 1448
+    },
+    {
+      "id": "dev-13",
+      "type": "global",
+      "question": "Какой узел чаще всего отказывает в линейке «Арктика»?",
+      "answer": "Узел «Арктика» чаще всего отказывает в линейке по причине недоступности данных. Пожалуйста, проверьте данные на указанном складе.",
+      "correct": false,
+      "refused": true,
+      "fabricated": [],
+      "sources": [],
+      "source_recall": null,
+      "steps": [
+        {
+          "tool": "get_price",
+          "args": {
+            "part_id": "Арктика",
+            "warehouse": "Москва"
+          },
+          "result": null,
+          "error": "Ожидаемые аргументы: part_id."
+        }
+      ],
+      "rejected_steps": 1,
+      "llm_calls": 2,
+      "tokens": 1432
+    },
+    {
+      "id": "dev-14",
+      "type": "global",
+      "question": "Какой узел чаще всего отказывает в линейке «Гольфстрим»?",
+      "answer": "Узел «Гольфстрим» чаще всего отказывает в линейке по данным, что указано в параметре 'part_id'. Пожалуйста, уточните данные для получения точной информации.",
+      "correct": false,
+      "refused": true,
+      "fabricated": [],
+      "sources": [],
+      "source_recall": null,
+      "steps": [
+        {
+          "tool": "get_price",
+          "args": {
+            "part_id": "1234567890",
+            "warehouse": "Москва"
+          },
+          "result": null,
+          "error": "Ожидаемые аргументы: part_id."
+        }
+      ],
+      "rejected_steps": 1,
+      "llm_calls": 2,
+      "tokens": 1453
+    },
+    {
+      "id": "dev-15",
+      "type": "global",
+      "question": "У какой модели линейки «Бриз» больше всего отказов?",
+      "answer": "Введи номер детали для проверки остатка: Бриз.",
+      "correct": false,
+      "refused": true,
+      "fabricated": [],
+      "sources": [],
+      "source_recall": null,
+      "steps": [
+        {
+          "tool": "get_price",
+          "args": {
+            "part_id": "Бриз"
+          },
+          "result": null,
+          "error": "Укажите номер детали в формате P-1042 или P-1042B."
+        }
+      ],
+      "rejected_steps": 1,
+      "llm_calls": 2,
+      "tokens": 1394
+    },
+    {
+      "id": "dev-16",
+      "type": "global",
+      "question": "Какие детали из руководств линейки «Бриз» сняты с производства?",
+      "answer": "У вас нет данных о деталихе. Пожалуйста, предоставьте детали для проверки.",
+      "correct": false,
+      "refused": true,
+      "fabricated": [],
+      "sources": [],
+      "source_recall": null,
+      "steps": [
+        {
+          "tool": "get_price",
+          "args": {
+            "part_id": "1234567890",
+            "warehouse": "Москва"
+          },
+          "result": null,
+          "error": "Ожидаемые аргументы: part_id."
+        }
+      ],
+      "rejected_steps": 1,
+      "llm_calls": 2,
+      "tokens": 1427
+    },
+    {
+      "id": "dev-17",
+      "type": "tool",
+      "question": "Ошибка E-17 на AR-210. Какую деталь заказать, есть ли она на складе в Казани и сколько она стоит?",
+      "answer": "Ошибка E-17 на AR-210. На складе нет детали AR-210. Какую деталь заказать, есть ли она на складе в Казани и сколько она стоит?",
+      "correct": false,
+      "refused": true,
+      "fabricated": [],
+      "sources": [],
+      "source_recall": 0.0,
+      "steps": [
+        {
+          "tool": "get_price",
+          "args": {
+            "part_id": "AR-210",
+            "warehouse": "Казань"
+          },
+          "result": null,
+          "error": "Ожидаемые аргументы: part_id."
+        }
+      ],
+      "rejected_steps": 1,
+      "llm_calls": 2,
+      "tokens": 1472
+    },
+    {
+      "id": "dev-18",
+      "type": "tool",
+      "question": "Ошибка E-22 на GS-520. Какую деталь заказать, есть ли она на складе в Новосибирске и сколько она стоит?",
+      "answer": "Ошибка E-22 на GS-520. На складе нет детали GS-520. Какую деталь заказать, есть ли она на складе в Новосибирске и сколько она стоит?",
+      "correct": false,
+      "refused": true,
+      "fabricated": [],
+      "sources": [],
+      "source_recall": 0.0,
+      "steps": [
+        {
+          "tool": "get_price",
+          "args": {
+            "part_id": "GS-520",
+            "warehouse": "Новосибирск"
+          },
+          "result": null,
+          "error": "Ожидаемые аргументы: part_id."
+        }
+      ],
+      "rejected_steps": 1,
+      "llm_calls": 2,
+      "tokens": 1485
+    },
+    {
+      "id": "dev-19",
+      "type": "tool",
+      "question": "Сколько стоит деталь узла «контроллер» для модели BZ-110?",
+      "answer": "Введи номер детали для проверки остатка: 1042.",
+      "correct": false,
+      "refused": true,
+      "fabricated": [],
+      "sources": [],
+      "source_recall": 0.0,
+      "steps": [
+        {
+          "tool": "get_price",
+          "args": {
+            "part_id": "контрл-бз-110"
+          },
+          "result": null,
+          "error": "Укажите номер детали в формате P-1042 или P-1042B."
+        }
+      ],
+      "rejected_steps": 1,
+      "llm_calls": 2,
+      "tokens": 1428
+    },
+    {
+      "id": "dev-20",
+      "type": "tool",
+      "question": "Сколько штук детали P-1118B есть на складе в Казани?",
+      "answer": "Sorry, but I don't have the information about the quantity of P-1118B on the Kazan warehouse. Could you please provide me with the part ID?",
+      "correct": false,
+      "refused": true,
+      "fabricated": [],
+      "sources": [],
+      "source_recall": null,
+      "steps": [
+        {
+          "tool": "get_price",
+          "args": {
+            "part_id": "P-1118B",
+            "warehouse": "Казань"
+          },
+          "result": null,
+          "error": "Ожидаемые аргументы: part_id."
+        }
+      ],
+      "rejected_steps": 1,
+      "llm_calls": 2,
+      "tokens": 1441
+    },
+    {
+      "id": "dev-21",
+      "type": "tool",
+      "question": "Оформи заказ: 2 штуки детали для устранения ошибки E-20 на BZ-120, склад Москва.",
+      "answer": "Ваш запрос содержит несоответствующие аргументы. Пожалуйста, укажите правильные значения для аргументов:\n\n- part_id: BZ-120\n- warehouse: Москва\n- qty: 2\n\nПожалуйста, проверьте данные в вашем ERP и попробуйте снова.",
+      "correct": false,
+      "refused": true,
+      "fabricated": [],
+      "sources": [],
+      "source_recall": 0.0,
+      "steps": [
+        {
+          "tool": "create_service_order",
+          "args": {
+            "qty": 2,
+            "part_id": "BZ-120",
+            "warehouse": "Москва"
+          },
+          "result": null,
+          "error": "Ожидаемые аргументы: part_id, warehouse, qty, model."
+        }
+      ],
+      "rejected_steps": 1,
+      "llm_calls": 2,
+      "tokens": 1513
+    },
+    {
+      "id": "dev-22",
+      "type": "refusal",
+      "question": "Что означает ошибка E-99 на AR-210?",
+      "answer": "В базе знаний не найдено.",
+      "correct": true,
+      "refused": true,
+      "fabricated": [],
+      "sources": [],
+      "source_recall": null,
+      "steps": [
+        {
+          "tool": "check_stock",
+          "args": {
+            "part_id": "AR-210",
+            "warehouse": "Москва"
+          },
+          "result": null,
+          "error": "Укажите номер детали в формате P-1042 или P-1042B."
+        }
+      ],
+      "rejected_steps": 1,
+      "llm_calls": 3,
+      "tokens": 1908
+    },
+    {
+      "id": "dev-23",
+      "type": "refusal",
+      "question": "Какую деталь заказать при ошибке E-17 на AR-999?",
+      "answer": "В базе знаний не найдено.",
+      "correct": true,
+      "refused": true,
+      "fabricated": [],
+      "sources": [],
+      "source_recall": null,
+      "steps": [
+        {
+          "tool": "get_price",
+          "args": {
+            "part_id": "AR-999"
+          },
+          "result": null,
+          "error": "Укажите номер детали в формате P-1042 или P-1042B."
+        }
+      ],
+      "rejected_steps": 1,
+      "llm_calls": 3,
+      "tokens": 1813
+    },
+    {
+      "id": "dev-24",
+      "type": "refusal",
+      "question": "Сколько стоит деталь P-9999?",
+      "answer": "В базе знаний не найдено. В ERP нет данных: деталь P-9999 не найдена.",
+      "correct": true,
+      "refused": true,
+      "fabricated": [],
+      "sources": [],
+      "source_recall": null,
+      "steps": [
+        {
+          "tool": "get_price",
+          "args": {
+            "part_id": "P-9999"
+          },
+          "result": null,
+          "error": "В ERP нет данных: деталь P-9999 не найдена"
+        }
+      ],
+      "rejected_steps": 1,
+      "llm_calls": 2,
+      "tokens": 1414
+    }
+  ]
+}

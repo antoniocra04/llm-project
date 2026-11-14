@@ -1,0 +1,1 @@
+{"id": "chatcmpl-882", "object": "chat.completion", "created": 1794654668, "model": "qwen2.5:0.5b", "system_fingerprint": "fp_ollama", "choices": [{"index": 0, "message": {"role": "assistant", "content": "{\n    \"answer\": \"Базовая модель AR-999\",\n    \"score\": 10\n}"}, "finish_reason": "stop"}], "usage": {"prompt_tokens": 460, "completion_tokens": 26, "total_tokens": 486}}

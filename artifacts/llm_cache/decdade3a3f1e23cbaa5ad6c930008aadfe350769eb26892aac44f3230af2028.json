@@ -1,0 +1,1 @@
+{"id": "chatcmpl-293", "object": "chat.completion", "created": 1794652981, "model": "qwen2.5:0.5b", "system_fingerprint": "fp_ollama", "choices": [{"index": 0, "message": {"role": "assistant", "content": "Введи номер детали для проверки остатка: 1042."}, "finish_reason": "stop"}], "usage": {"prompt_tokens": 727, "completion_tokens": 20, "total_tokens": 747}}

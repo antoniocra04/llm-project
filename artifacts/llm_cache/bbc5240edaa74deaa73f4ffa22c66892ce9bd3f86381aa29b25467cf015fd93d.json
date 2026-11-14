@@ -1,0 +1,1 @@
+{"id": "chatcmpl-800", "object": "chat.completion", "created": 1794653514, "model": "qwen2.5:0.5b", "system_fingerprint": "fp_ollama", "choices": [{"index": 0, "message": {"role": "assistant", "content": "{\n  \"answer\": \"Деталь: V-14\",\n  \"score\": 8\n}"}, "finish_reason": "stop"}], "usage": {"prompt_tokens": 189, "completion_tokens": 24, "total_tokens": 213}}

@@ -1,0 +1,1 @@
+{"id": "chatcmpl-548", "object": "chat.completion", "created": 1794652974, "model": "qwen2.5:0.5b", "system_fingerprint": "fp_ollama", "choices": [{"index": 0, "message": {"role": "assistant", "content": "Нет подтверждения для P-1042 и P-1042B."}, "finish_reason": "stop"}], "usage": {"prompt_tokens": 372, "completion_tokens": 23, "total_tokens": 395}}

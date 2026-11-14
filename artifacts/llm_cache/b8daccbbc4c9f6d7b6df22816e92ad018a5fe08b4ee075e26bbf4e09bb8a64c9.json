@@ -1,0 +1,1 @@
+{"id": "chatcmpl-65", "object": "chat.completion", "created": 1794653575, "model": "qwen2.5:0.5b", "system_fingerprint": "fp_ollama", "choices": [{"index": 0, "message": {"role": "assistant", "content": "{\n  \"answer\": \"Model (GS-410)\",\n  \"score\": 9\n}"}, "finish_reason": "stop"}], "usage": {"prompt_tokens": 454, "completion_tokens": 23, "total_tokens": 477}}

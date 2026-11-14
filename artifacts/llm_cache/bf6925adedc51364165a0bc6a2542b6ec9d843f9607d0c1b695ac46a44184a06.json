@@ -1,0 +1,1 @@
+{"id": "chatcmpl-608", "object": "chat.completion", "created": 1794653165, "model": "qwen2.5:0.5b", "system_fingerprint": "fp_ollama", "choices": [{"index": 0, "message": {"role": "assistant", "content": "ПолярТех"}, "finish_reason": "stop"}], "usage": {"prompt_tokens": 467, "completion_tokens": 6, "total_tokens": 473}}

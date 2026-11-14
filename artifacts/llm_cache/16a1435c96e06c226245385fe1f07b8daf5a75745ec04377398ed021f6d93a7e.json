@@ -1,0 +1,1 @@
+{"id": "chatcmpl-307", "object": "chat.completion", "created": 1794654504, "model": "qwen2.5:0.5b", "system_fingerprint": "fp_ollama", "choices": [{"index": 0, "message": {"role": "assistant", "content": "2 штуки детали для устранения ошибки E-20 на BZ-120, склад Москва."}, "finish_reason": "stop"}], "usage": {"prompt_tokens": 573, "completion_tokens": 29, "total_tokens": 602}}

@@ -1,0 +1,1 @@
+{"id": "chatcmpl-569", "object": "chat.completion", "created": 1794652974, "model": "qwen2.5:0.5b", "system_fingerprint": "fp_ollama", "choices": [{"index": 0, "message": {"role": "assistant", "content": "Пожалуйста, укажите номер детали в формате P-1042 или P-1042B."}, "finish_reason": "stop"}], "usage": {"prompt_tokens": 716, "completion_tokens": 32, "total_tokens": 748}}

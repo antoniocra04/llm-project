@@ -1,0 +1,1 @@
+{"id": "chatcmpl-682", "object": "chat.completion", "created": 1794652976, "model": "qwen2.5:0.5b", "system_fingerprint": "fp_ollama", "choices": [{"index": 0, "message": {"role": "assistant", "content": "Введи номер детали, чтобы я мог управлять вашим сервисным заказом."}, "finish_reason": "stop"}], "usage": {"prompt_tokens": 734, "completion_tokens": 21, "total_tokens": 755}}

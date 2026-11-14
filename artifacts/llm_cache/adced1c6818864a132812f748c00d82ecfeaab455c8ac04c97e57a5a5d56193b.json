@@ -1,0 +1,1 @@
+{"id": "chatcmpl-158", "object": "chat.completion", "created": 1794653690, "model": "qwen2.5:0.5b", "system_fingerprint": "fp_ollama", "choices": [{"index": 0, "message": {"role": "assistant", "content": "{\n  \"answer\": \"Деталь заказать: AR-210\",\n  \"score\": 10\n}"}, "finish_reason": "stop"}], "usage": {"prompt_tokens": 243, "completion_tokens": 28, "total_tokens": 271}}

@@ -1,0 +1,1 @@
+{"id": "chatcmpl-163", "object": "chat.completion", "created": 1794652979, "model": "qwen2.5:0.5b", "system_fingerprint": "fp_ollama", "choices": [{"index": 0, "message": {"role": "assistant", "content": "Введи номер детали для проверки остатка: Бриз."}, "finish_reason": "stop"}], "usage": {"prompt_tokens": 711, "completion_tokens": 18, "total_tokens": 729}}

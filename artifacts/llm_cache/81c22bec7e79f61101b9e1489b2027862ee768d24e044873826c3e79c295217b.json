@@ -1,0 +1,1 @@
+{"id": "chatcmpl-581", "object": "chat.completion", "created": 1794653713, "model": "qwen2.5:0.5b", "system_fingerprint": "fp_ollama", "choices": [{"index": 0, "message": {"role": "assistant", "content": "{ \"answer\": \"Нет\", \"score\": 1 }"}, "finish_reason": "stop"}], "usage": {"prompt_tokens": 302, "completion_tokens": 15, "total_tokens": 317}}
